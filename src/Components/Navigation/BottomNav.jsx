@@ -35,7 +35,7 @@ const BottomNav = ({matches}) => {
                 alignItems: 'center',
                 padding: '0px !important',
                 backgroundColor: 'white',
-                position: 'absolute',
+                position: 'fixed',
                 bottom: 1,
                 right: 0,
                 height: '50px',
