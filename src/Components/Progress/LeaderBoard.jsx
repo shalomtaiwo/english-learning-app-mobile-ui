@@ -9,7 +9,7 @@ const LeaderBoard = ({ loading }) => {
 
     const getApiData = async () => {
         const response = await fetch(
-            "https://dummyjson.com/users?limit=10"
+            "https://dummyjson.com/users?limit=3"
         ).then((response) => response.json());
         setUsers(response);
     };
@@ -22,7 +22,6 @@ const LeaderBoard = ({ loading }) => {
     return (
         <div
             style={{
-                maxHeight: '175px',
                 overflowY: 'scroll'
             }}
         >
