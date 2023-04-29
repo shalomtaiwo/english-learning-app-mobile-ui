@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.mantine-Progress-root{
+  background-color: #cad0ef !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
