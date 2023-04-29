@@ -1,8 +1,9 @@
 import { ActionIcon } from '@mantine/core'
 import { IconChartBar, IconHome, IconSettings, IconUsers } from '@tabler/icons-react'
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const BottomNav = () => {
+const BottomNav = ({matches}) => {
     const item = [
         {
             label: 'Home',
@@ -38,13 +39,18 @@ const BottomNav = () => {
                 bottom: 1,
                 right: 0,
                 height: '50px',
-                borderRadius: '35px'
+                borderTopLeftRadius: '35px',
+                borderBottomLeftRadius: `${matches ? ' 0px' : '35px'}`,
+                borderTopRightRadius: '35px',
+                borderBottomRightRadius: `${matches ? ' 0px' : '35px'}`
             }}>
                 {
-                    item?.map((items) => {
-                        return <ActionIcon size={21}>
-                            {items?.icon}
-                        </ActionIcon>
+                    item?.map((items, index) => {
+                        return <NavLink to={items?.slug} key={index}>
+                            <ActionIcon size={21}>
+                                {items?.icon}
+                            </ActionIcon>
+                        </NavLink>
                     })
                 }
             </div>

@@ -2,7 +2,7 @@ import { Card, CardBody } from '@chakra-ui/react'
 import { Flex } from '@mantine/core'
 import React from 'react'
 
-const MobileCards = ({ children, img, style, radius }) => {
+const MobileCards = ({ children, img, style, radius, direction }) => {
     return (
         <Card
             backgroundColor={'white'}
@@ -14,7 +14,7 @@ const MobileCards = ({ children, img, style, radius }) => {
             <CardBody>
                 {
                     img ?
-                        <Flex align={'center'} justify={'center'} padding={'5px'}>
+                        <Flex direction={direction} align={'center'} justify={'center'} padding={'5px'}>
                             {children}
                         </Flex>
                         :

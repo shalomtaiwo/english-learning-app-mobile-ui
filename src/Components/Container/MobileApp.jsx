@@ -2,8 +2,27 @@ import React from 'react'
 import { Device } from 'react-mobile-device-frames'
 import { Outlet } from 'react-router-dom'
 import BottomNav from '../Navigation/BottomNav'
-
+import { useMediaQuery } from '@mantine/hooks';
 const MobileApp = () => {
+    const matches = useMediaQuery('(max-width: 414px)');
+
+    if (matches) {
+        return (
+            <div style={{
+                backgroundColor: "#f6f8fe",
+                height: '100vh',
+                width: '100%',
+                padding: '25px 20px',
+                color: 'black'
+            }}>
+                <div>
+                    <Outlet />
+                </div>
+                <BottomNav matches={matches} />
+            </div>
+        )
+    }
+
     return (
         <Device device="galaxy-s22">
             <div style={{
