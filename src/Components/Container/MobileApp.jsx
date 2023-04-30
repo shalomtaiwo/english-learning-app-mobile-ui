@@ -10,13 +10,15 @@ const MobileApp = () => {
         return (
             <div style={{
                 backgroundColor: "#f6f8fe",
-                height: '100vh',
+                minHeight: '100vh',
                 margin: '0 auto',
                 maxWidth: '414px',
                 padding: '25px 20px',
                 color: 'black'
             }}>
-                <div>
+                <div style={{
+                    paddingBottom: '20px'
+                }}>
                     <Outlet />
                 </div>
                 <BottomNav matches={matches} />

@@ -185,6 +185,7 @@ const HCalender = () => {
                                     <ChipSelect item={item?.num} day={item?.day} />
                                     <Text
                                         size={12}
+                                        transform={'capitalize'}
                                         color={item?.day === "Thu" && "orange"}>{item?.day}</Text>
                                 </Flex>
                             </Carousel.Slide>
