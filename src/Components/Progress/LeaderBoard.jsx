@@ -33,7 +33,7 @@ const LeaderBoard = ({ loading }) => {
                             key={index}
                             style={{
                                 marginBottom: '15px',
-                                padding: '8px'
+                                padding: '8px 8px 5px 8px'
                             }}
                             radius={'12px'}
                         ><Skeleton visible={loading} height={42}  radius="md">
@@ -47,11 +47,11 @@ const LeaderBoard = ({ loading }) => {
                                     </div>
 
                                     <div style={{ flex: 1 }}>
-                                        <Text size="sm" weight={500}>
+                                        <Text size={13} weight={500}>
                                             {user?.firstName}{` ${user?.lastName}`}
                                         </Text>
 
-                                        <Text color="dimmed" size="xs">
+                                        <Text color="dimmed" size={10}>
                                             {user?.address?.city}
                                         </Text>
                                     </div>

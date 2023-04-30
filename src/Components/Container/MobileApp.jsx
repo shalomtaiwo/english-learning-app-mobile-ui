@@ -11,7 +11,8 @@ const MobileApp = () => {
             <div style={{
                 backgroundColor: "#f6f8fe",
                 height: '100vh',
-                width: '100%',
+                margin: '0 auto',
+                maxWidth: '414px',
                 padding: '25px 20px',
                 color: 'black'
             }}>

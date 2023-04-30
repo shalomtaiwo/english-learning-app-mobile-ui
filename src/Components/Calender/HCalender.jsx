@@ -161,7 +161,7 @@ const HCalender = () => {
                         return (
                             <Carousel.Slide key={index}>
                                 <Group position='center'>
-                                    {item}
+                                    <Text fw={'700'}>{item}</Text>
                                 </Group>
                             </Carousel.Slide>
                         )

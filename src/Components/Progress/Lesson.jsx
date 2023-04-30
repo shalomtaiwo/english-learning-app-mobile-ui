@@ -40,7 +40,7 @@ const Lesson = ({ loading }) => {
           withIndicators={false}
           withControls={false}
           align="start"
-          slideSize="45.333333%"
+          slideSize="130px"
         >
           {
             items?.map((item, index) => {

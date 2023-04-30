@@ -3,7 +3,7 @@ import { IconChartBar, IconHome, IconSettings, IconUsers } from '@tabler/icons-r
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const BottomNav = ({matches}) => {
+const BottomNav = ({ matches }) => {
     const item = [
         {
             label: 'Home',
@@ -18,12 +18,12 @@ const BottomNav = ({matches}) => {
         {
             label: 'Community',
             icon: <IconUsers />,
-            slug: '/',
+            slug: '/community',
         },
         {
             label: 'Settings',
             icon: <IconSettings />,
-            slug: '/',
+            slug: '/settings',
         }
     ]
     return (
@@ -35,7 +35,7 @@ const BottomNav = ({matches}) => {
                 alignItems: 'center',
                 padding: '0px !important',
                 backgroundColor: 'white',
-                position: 'fixed',
+                position: `${matches ? 'fixed' : 'absolute'}`,
                 bottom: 1,
                 right: 0,
                 height: '50px',
@@ -46,11 +46,16 @@ const BottomNav = ({matches}) => {
             }}>
                 {
                     item?.map((items, index) => {
-                        return <NavLink to={items?.slug} key={index}>
-                            <ActionIcon size={21}>
-                                {items?.icon}
-                            </ActionIcon>
-                        </NavLink>
+                        return (
+                            <NavLink
+                                to={items?.slug}
+                                activeClassName="active"
+                                key={index}>
+                                <ActionIcon size={21}>
+                                    {items?.icon}
+                                </ActionIcon>
+                            </NavLink>
+                        )
                     })
                 }
             </div>

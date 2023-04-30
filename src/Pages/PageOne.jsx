@@ -14,7 +14,7 @@ const PageOne = () => {
     React.useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 3000);
+        }, 2500);
     }, [])
 
 
@@ -22,14 +22,20 @@ const PageOne = () => {
         <>
             <Flex className='first_head'>
                 <div style={{
-                    width: '80%'
+                    width: 'calc(100% - 50px)'
                 }}>
                     <Skeleton visible={loading} height={8} mt={4} width="70%" radius="xl">
                         <Text size={13}>Hello Rachel,</Text>
                     </Skeleton>
                     <Space h={5} />
                     <Skeleton visible={loading} height={8} mt={6} width="70%" radius="xl">
-                        <Title order={6}>Ready to play English?</Title>
+                        <Title order={6} size={13}>
+                            <span style={{
+                                color: '#6472ba'
+                            }}>Ready to</span>
+                            <span style={{
+                                color: 'orange'
+                            }}> play English?</span></Title>
                     </Skeleton>
                 </div>
                 <Skeleton visible={loading} height={30} circle mb="xl">
@@ -40,13 +46,13 @@ const PageOne = () => {
                         alignItems: 'center',
                         backgroundColor: 'white',
                         height: 'fit-content',
-                        padding: '5px',
+                        padding: '4px 5px',
                         borderRadius: '20px'
                     }}>
                         <MobileButton action>
-                            <img src={fire} alt='fire_icon' width={14} />
+                            <img src={fire} alt='fire_icon' width={13} />
                         </MobileButton>
-                        <Text>65</Text>
+                        <Text size={11} fw={600}>65</Text>
                     </div>
                 </Skeleton>
             </Flex>
@@ -60,11 +66,14 @@ const PageOne = () => {
                     borderRadius={'18px'}
                     color={'black'}
                 >
-                    <CardBody padding={'5px 10px !important'}
+                    <CardBody padding={'10px 10px 5px !important'}
                     >
                         <Flex direction={'column'} align={'left'}>
-                            <Text size={12}>Today's goal</Text>
-                            <Flex justify={'space-between'}>
+                            <Text size={10} fw={600} style={{
+                                marginLeft: '12%',
+                                color: '#6472ba'
+                            }}>Today's goal</Text>
+                            <Flex justify={'space-evenly'}>
                                 <RingProgress
                                     size={85}
                                     thickness={9}
@@ -76,8 +85,7 @@ const PageOne = () => {
                                         </Text>
                                     }
                                 />
-                                <div style={{
-                                }}>
+                                <div>
                                     <Title order={5}>Excellent!</Title>
                                     <Text size={12}>You're almost there.</Text>
                                     <Text size={12}>Finish the goal to achieve</Text>
@@ -90,15 +98,15 @@ const PageOne = () => {
                     </CardBody>
                 </Card>
             </Skeleton>
-            <Space h={46} />
+            <Space h={45} />
             <Section
                 title={'Your lesson'}
                 icon={<IconSquareRoundedChevronRight color='#6472ba' />}
             >
-                <Space h={'md'} />
+                <Space h={8} />
                 <Lesson loading={loading} />
             </Section>
-            <Space h={'xl'} />
+            <Space h={35} />
             <Section
                 title={'Leaderboard'}
                 icon={<IconSquareRoundedChevronRight color='#6472ba' />}
