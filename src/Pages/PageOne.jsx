@@ -75,12 +75,12 @@ const PageOne = () => {
                             }}>Today's goal</Text>
                             <Flex justify={'space-evenly'}>
                                 <RingProgress
-                                    size={85}
+                                    size={95}
                                     thickness={9}
                                     rootColor='#fed4be'
                                     sections={[{ value: 40, color: 'orange' }]}
                                     label={
-                                        <Text color="orange" weight={700} align="center" size="sm">
+                                        <Text color="black" weight={700} align="center" size="sm">
                                             40%
                                         </Text>
                                     }
