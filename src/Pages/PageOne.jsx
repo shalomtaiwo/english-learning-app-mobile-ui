@@ -7,9 +7,13 @@ import Section from '../Components/Headers/Headers'
 import { IconSquareRoundedChevronRight } from '@tabler/icons-react'
 import Lesson from '../Components/Progress/Lesson'
 import LeaderBoard from '../Components/Progress/LeaderBoard'
+import { useMediaQuery } from '@mantine/hooks';
 
 const PageOne = () => {
     const [loading, setLoading] = React.useState(true);
+
+    const matches = useMediaQuery('(max-width: 414px)');
+
 
     React.useEffect(() => {
         setTimeout(() => {
@@ -70,7 +74,7 @@ const PageOne = () => {
                     >
                         <Flex direction={'column'} align={'left'}>
                             <Text size={10} fw={600} style={{
-                                marginLeft: '12%',
+                                marginLeft: `${matches ? '40px' : '20px'}`,
                                 color: '#6472ba'
                             }}>Today's goal</Text>
                             <Flex justify={'space-evenly'}>
