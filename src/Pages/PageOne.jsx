@@ -52,7 +52,7 @@ const PageOne = () => {
                         <MobileButton action>
                             <img src={fire} alt='fire_icon' width={13} />
                         </MobileButton>
-                        <Text size={11} fw={600}>65</Text>
+                        <Text size={11} fw={700}>65</Text>
                     </div>
                 </Skeleton>
             </Flex>

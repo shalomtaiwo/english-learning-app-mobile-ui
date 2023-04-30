@@ -67,7 +67,7 @@ const Lesson = ({ loading }) => {
                       <Text size={11}>{item.progress}%</Text>
                     </div>
                   </div>
-                  <Text fw={500} size={12}>
+                  <Text fw={700} size={12}>
                     {item.title}
                   </Text>
                   <Flex align={'center'} justify={'flex-start'}>

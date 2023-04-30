@@ -47,7 +47,7 @@ const LeaderBoard = ({ loading }) => {
                                     </div>
 
                                     <div style={{ flex: 1 }}>
-                                        <Text size={13} weight={500}>
+                                        <Text size={13} weight={600}>
                                             {user?.firstName}{` ${user?.lastName}`}
                                         </Text>
 
@@ -64,7 +64,7 @@ const LeaderBoard = ({ loading }) => {
                                             <IconArrowNarrowUp />
                                         </ActionIcon>
                                         <ActionIcon color='orange' variant='transparent'>
-                                            <img src={fire} width={11} alt='fire_icon' /> <Text size={10}>
+                                            <img src={fire} width={11} alt='fire_icon' /> <Text size={10} fw={500}>
                                                 {user?.height}
                                             </Text>
                                         </ActionIcon>
